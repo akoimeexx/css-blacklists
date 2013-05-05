@@ -1,0 +1,52 @@
+/**      1         2         3         4         5         6         7         8
+ * 45678901234567890123456789012345678901234567890123456789012345678901234567890
+ * 
+ * no-ads.css: Global css ad-remover, v.1.0.0
+ *    Johnathan Graham McKnight <akoimeexx@gmail.com>
+ * 
+ * No-ads.css simply hides the ads generated in markup by services such as
+ * GoogleAds, Amazon, and Facebook. In addition, a blanket entry attempts to 
+ * hide more generic ad placements by keywords as element ids or classes. 
+ * Ads are still loaded, but will not be displayed for the end-user.
+ * 
+ * Adding !important to the entries is like dropping an F-bomb on elements 
+ * that misbehave. The Penguin states it must be so. (:>( )
+ * 
+ * 
+ * To use this file, google how to install user stylesheets into your browser
+ * of choice.
+ * 
+ * Created on January 1st, 2008
+ * last updated on May 4th, 2013
+ */
+    /**
+     * General Classes and IDs, just in case private sites actually decide
+     * to encapsulate their advertisements as well.
+     */
+    .ad, .ads, .advertise, .advertisement, .advertisements, .promo, 
+    .promotion, .promotional, .sponsor, .sponsors, #ad, #ads, #advertise, 
+    #advertisement, #advertisements, #promo, #promotion, #promotional, 
+    #sponsor, #sponsors, 
+    /* GoogleAd-populated sites */
+    ins[style], iframe[name*="google_ads_frame"], .adsByGoogle, 
+    .googleAdBlock, .googleRadLinks, a[href*=".google.com/adsense"], 
+    #rhs[style], #tads[style], 
+    /* Youtube "promoted" videos */
+    .ad-div, #pyv-placeholder,
+    /* Amazon paid-advertisements */
+    iframe[title="Ad"],
+    /* Facebook advertisements */
+    #pagelet_adbox, .adcolumn_wrapper, #ssponsor.sponsors,
+    div.ego_section[data-adblock-hash],
+    /* Twitter promoted items */
+    .promoted-account, .promoted-trend,
+    /* DoubleClick ads */
+    a[href*=".doubleclick.net/"],
+    /* Interclick ads */
+    a[href^="http://a1.interclick.com/"] {
+        display: none !important;
+        height: 0px !important;
+        overflow: hidden !important;
+        visibility: hidden !important;
+        width: 0px !important;
+    }
